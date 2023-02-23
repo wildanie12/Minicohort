@@ -11,7 +11,7 @@ import (
 
 // DatabaseInstance contains all active instance of database connection.
 type DatabaseInstance struct {
-	mysql *gorm.DB
+	Mysql *gorm.DB
 }
 
 // New creates instance of `DatabaseInstance`.
@@ -27,13 +27,13 @@ func (di *DatabaseInstance) ConnectMySQL() {
 		log.Fatal("Connection Error !")
 	}
 
-	di.mysql = db
+	di.Mysql = db
 }
 
 // MigrateMySQL creates database structure based on entities provided.
 func (di *DatabaseInstance) MigrateMySQL() {
 	// put all of your entity migration here ...
-	di.mysql.AutoMigrate(&entity.Cohort{})
+	di.Mysql.AutoMigrate(&entity.Cohort{})
 }
 
 // Close will ends all active connection object.
