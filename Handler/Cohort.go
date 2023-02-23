@@ -40,7 +40,6 @@ func PostCohort(c *gin.Context){
 }
 
 func DeleteCohort(c *gin.Context){
-	CohortId := c.Param("CohortId")
 	c.JSON(http.StatusOK, gin.H{
 		"message":"Delete Cohort Data From Database",
 	})
