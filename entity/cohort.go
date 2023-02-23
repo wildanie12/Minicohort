@@ -1,6 +1,6 @@
-package Minicohort
+package entity
 
 type Cohort struct {
-	CohortId int
+	CohortId   int
 	CohortName string
 }
